@@ -38,10 +38,12 @@ website:
         contents: 
           - quarto-workflows/browser.md
           - quarto-workflows/rstudio.qmd
-          - quarto-workflows/jupyter.md 
+          - quarto-workflows/jupyter.md
       - learning-more.qmd
       - href: transition-from-rmarkdown.qmd
         text: Transition from Rmd
+      - href: r-example.rmd
+        text: R Example
 
 
 format:
