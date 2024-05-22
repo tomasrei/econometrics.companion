@@ -7,6 +7,9 @@ subtitle: "Whatch estimators converge - and more!"
 
 This is a link: [Quarto](https://quarto.org).
 
+<!---
+Here is how you put a comment in!
+--->
 
 ## Qs
 
@@ -30,6 +33,9 @@ A: I found a index.qmd that contains the text in "Quarto workflows" in the quart
 
 Now it installs the rpackages everytime. But you can cache them
 [stackoverflow](https://stackoverflow.com/questions/59538441/does-github-action-install-the-same-packages-each-time).
+
+:::{.callout-note}
+As you modify `_quarto.yml`, the most important thing to know is that **spacing matters**. Pay attention to whether text is indented by one, two, four, or other spaces, and make sure you follow it; if your site is not looking as expected it is likely a silent error in your YAML. Some text editors like RStudio provide debugging support for YAML and are highly recommended to save you time and heartache.
 
 
 

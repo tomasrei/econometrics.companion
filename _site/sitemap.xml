@@ -6,7 +6,7 @@
   </url>
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/index.html</loc>
-    <lastmod>2024-05-21T20:54:38.826Z</lastmod>
+    <lastmod>2024-05-22T19:01:18.815Z</lastmod>
   </url>
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/learning-more.html</loc>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/browser.html</loc>
-    <lastmod>2024-05-21T20:36:15.330Z</lastmod>
+    <lastmod>2024-05-22T19:04:27.244Z</lastmod>
   </url>
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/jupyter.html</loc>
@@ -26,7 +26,7 @@
   </url>
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/index.html</loc>
-    <lastmod>2024-05-21T20:36:15.365Z</lastmod>
+    <lastmod>2024-05-22T19:01:13.796Z</lastmod>
   </url>
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/quarto-workflows/rstudio.html</loc>
@@ -35,5 +35,33 @@
   <url>
     <loc>https://openscapes.github.io/quarto-website-tutorial/r-example.html</loc>
     <lastmod>2024-05-21T20:40:56.173Z</lastmod>
+  </url>
+  <url>
+    <loc>https://openscapes.github.io/quarto-website-tutorial/my_scripts/test1.html</loc>
+    <lastmod>2024-05-22T19:02:05.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/index.html</loc>
+    <lastmod>2024-05-22T19:01:18.815Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/quarto-workflows/quarto.html</loc>
+    <lastmod>2024-05-22T19:17:13.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/test1.html</loc>
+    <lastmod>2024-05-22T19:02:05.613Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/quarto-workflows/markdown.html</loc>
+    <lastmod>2024-05-22T19:04:27.244Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/montecarlo_income.html</loc>
+    <lastmod>2024-05-22T19:22:54.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/markdown.html</loc>
+    <lastmod>2024-05-22T19:22:44.269Z</lastmod>
   </url>
 </urlset>

@@ -3,9 +3,9 @@ project:
   
 website: 
   page-navigation: true
-  title: "Making sharable documents with Quarto" 
-  site-url: "https://openscapes.github.io/quarto-website-tutorial" 
-  repo-url: https://github.com/openscapes/quarto-website-tutorial 
+  title: "from _quarto.yml" 
+  site-url: "https://tomasrei.github.io/econometrics.companion/" 
+  repo-url: https://github.com/tomasrei/econometrics.companion
   repo-actions: [edit, issue]
   
   page-footer:
@@ -17,30 +17,21 @@ website:
     pinned: true
     align: center
     tools: 
-      - icon: globe
-        href: https://openscapes.org
-        text: "Openscapes.org"
       - icon: github
-        href: https://github.com/openscapes/quarto-website-tutorial
-        text: "Quarto website tutorial"
-      - icon: twitter
-        href: https://twitter.com/openscapes
-        text: "Openscapes Twitter"         
+        href: https://github.com/tomasrei
+        text: "Github repo"
 
     style: "docked"
     search: true
     collapse-level: 1
     contents:
       - href: index.qmd
-        text: Text from _quarto.yml
-      - explore.qmd
-      - section: quarto-workflows/index.qmd
+        text: Welcome page
+      - section: my_scripts/montecarlo_income.qmd
         contents: 
-          - quarto-workflows/browser.md
-          - quarto-workflows/rstudio.qmd
-          - quarto-workflows/jupyter.md
-      - learning-more.qmd
-      - href: my_scripts/test1.qmd
+          - my_scripts/montecarlo_income.qmd
+          - my_scripts/markdown.md
+
 
 
 format:
