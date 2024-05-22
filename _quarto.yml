@@ -44,6 +44,7 @@ website:
         text: Transition from Rmd
       - href: r-example.rmd
         text: R Example
+      - href: my_scripts/test1.qmd
 
 
 format:
