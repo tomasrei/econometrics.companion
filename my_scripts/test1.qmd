@@ -1,0 +1,13 @@
+---
+title: From test1.qmd
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+library(tidyverse)
+Titanic |> 
+  as_tibble() |> 
+  plot()
+```
+

@@ -3,7 +3,7 @@ title: "Monte Carlo simulations for the curious"
 subtitle: "Whatch estimators converge - and more!"
 ---
 
-## Welcome {#welcome}
+## Test text {#welcome}
 
 This is a link: [Quarto](https://quarto.org).
 
