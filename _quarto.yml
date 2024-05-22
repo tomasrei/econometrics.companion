@@ -29,9 +29,9 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 2
+    collapse-level: 1
     contents:
-      - href: index.qmd # I think that 
+      - href: index.qmd
         text: Text from _quarto.yml
       - explore.qmd
       - section: quarto-workflows/index.qmd
@@ -40,10 +40,6 @@ website:
           - quarto-workflows/rstudio.qmd
           - quarto-workflows/jupyter.md
       - learning-more.qmd
-      - href: transition-from-rmarkdown.qmd
-        text: Transition from Rmd
-      - href: r-example.rmd
-        text: R Example
       - href: my_scripts/test1.qmd
 
 

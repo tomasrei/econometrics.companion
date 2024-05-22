@@ -25,3 +25,11 @@ I think Index is the 1st link on the LHS and the other two are the last two link
 
 A: I found a index.qmd that contains the text in "Quarto workflows" in the quarto-workflows folder.
 
+
+## Improving the github workflow
+
+Now it installs the rpackages everytime. But you can cache them
+[stackoverflow](https://stackoverflow.com/questions/59538441/does-github-action-install-the-same-packages-each-time).
+
+
+
