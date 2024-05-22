@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tomasrei.github.io/econometrics.companion/learning-more.html</loc>
-    <lastmod>2024-05-22T19:45:42.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tomasrei.github.io/econometrics.companion/explore.html</loc>
-    <lastmod>2024-05-22T19:45:42.650Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/markdown.html</loc>
-    <lastmod>2024-05-22T19:45:42.674Z</lastmod>
-  </url>
-  <url>
-    <loc>https://tomasrei.github.io/econometrics.companion/index.html</loc>
-    <lastmod>2024-05-22T19:45:42.674Z</lastmod>
+    <lastmod>2024-05-22T19:55:28.929Z</lastmod>
   </url>
   <url>
     <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/montecarlo_income.html</loc>
-    <lastmod>2024-05-22T19:45:42.674Z</lastmod>
+    <lastmod>2024-05-22T19:55:28.929Z</lastmod>
   </url>
   <url>
-    <loc>https://tomasrei.github.io/econometrics.companion/quarto-workflows/index.html</loc>
-    <lastmod>2024-05-22T19:45:42.706Z</lastmod>
+    <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/markdown.html</loc>
+    <lastmod>2024-05-22T19:55:28.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/index.html</loc>
+    <lastmod>2024-05-22T19:55:28.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/my_scripts/intro_monte_income.html</loc>
+    <lastmod>2024-05-22T19:55:28.929Z</lastmod>
+  </url>
+  <url>
+    <loc>https://tomasrei.github.io/econometrics.companion/explore.html</loc>
+    <lastmod>2024-05-22T19:55:28.905Z</lastmod>
   </url>
 </urlset>

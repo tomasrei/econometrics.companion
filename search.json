@@ -14,6 +14,78 @@
     "text": "An excellent overview: Reproducible authoring with Quarto - Mine Çetinkaya-Rundel, Feb 2022 - slides, youtube\nA Quarto tip a day in June 2022, from Mine Çetinkaya-Rundel.\n\n\n\nOpenscapes Champions Lessons Series\nOpenscapes Approach Guide\n\nNASA Earthdata Cloud Cookbook\n\nSee many more examples at the quarto gallery!\n\n\n\nAre you making onboarding documentation? Check out The Fay Lab Manual (now in Quarto!) for inspiration on structure - you could also start there and make it your own."
   },
   {
+    "objectID": "my_scripts/montecarlo_income.html",
+    "href": "my_scripts/montecarlo_income.html",
+    "title": "Simulating income distribution",
+    "section": "",
+    "text": "us_rent_income |&gt; \n  filter(variable == \"income\") |&gt; \n  arrange(desc(estimate)) |&gt; \n  clean_names() |&gt; \n  select(name, estimate) |&gt; \n  slice(1:10) |&gt; \n  gt() |&gt; \n  tab_header(\"Top 10 US incomes\")\n\n\n\n\n\n\n\n\nTop 10 US incomes\n\n\nname\nestimate\n\n\n\n\nDistrict of Columbia\n43198\n\n\nMaryland\n37147\n\n\nConnecticut\n35326\n\n\nNew Jersey\n35075\n\n\nMassachusetts\n34498\n\n\nNew Hampshire\n33172\n\n\nAlaska\n32940\n\n\nMinnesota\n32734\n\n\nVirginia\n32545\n\n\nHawaii\n32453",
+    "crumbs": [
+      "Simulating a income distribution",
+      "Simulating income distribution"
+    ]
+  },
+  {
+    "objectID": "my_scripts/markdown.html",
+    "href": "my_scripts/markdown.html",
+    "title": "markdown only source",
+    "section": "",
+    "text": "Using markdown documents also works.",
+    "crumbs": [
+      "Simulating a income distribution",
+      "markdown only source"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Monte Carlo simulations for the curious",
+    "section": "",
+    "text": "This is a link: Quarto.",
+    "crumbs": [
+      "Welcome page"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Monte Carlo simulations for the curious",
+    "section": "",
+    "text": "This is a link: Quarto.",
+    "crumbs": [
+      "Welcome page"
+    ]
+  },
+  {
+    "objectID": "index.html#qs",
+    "href": "index.html#qs",
+    "title": "Monte Carlo simulations for the curious",
+    "section": "Qs",
+    "text": "Qs\nI wonder what controls the arrows at the bottom of this page. Probably in the yml.\nThe _site folder contains the html-files:\n\nindex.html\nlearning-more.html\ntransition-from-rmarkdown.html\n\nI think Index is the 1st link on the LHS and the other two are the last two links. Where is Explore and setup and Quarto workflows from?\nA: I found a index.qmd that contains the text in “Quarto workflows” in the quarto-workflows folder.",
+    "crumbs": [
+      "Welcome page"
+    ]
+  },
+  {
+    "objectID": "index.html#improving-the-github-workflow",
+    "href": "index.html#improving-the-github-workflow",
+    "title": "Monte Carlo simulations for the curious",
+    "section": "Improving the github workflow",
+    "text": "Improving the github workflow\nNow it installs the rpackages everytime. But you can cache them stackoverflow.\n:::{.callout-note} As you modify _quarto.yml, the most important thing to know is that spacing matters. Pay attention to whether text is indented by one, two, four, or other spaces, and make sure you follow it; if your site is not looking as expected it is likely a silent error in your YAML. Some text editors like RStudio provide debugging support for YAML and are highly recommended to save you time and heartache.",
+    "crumbs": [
+      "Welcome page"
+    ]
+  },
+  {
+    "objectID": "my_scripts/intro_monte_income.html",
+    "href": "my_scripts/intro_monte_income.html",
+    "title": "Simulating a income distribution",
+    "section": "",
+    "text": "This will be the first thing we do on this website. The dataset will be used for upcoming projects.",
+    "crumbs": [
+      "Simulating a income distribution"
+    ]
+  },
+  {
     "objectID": "explore.html",
     "href": "explore.html",
     "title": "Explore and setup",
@@ -68,80 +140,5 @@
     "title": "Explore and setup",
     "section": "Onward!",
     "text": "Onward!\nNow you are ready to start editing and publishing! The next chapter describes how starting off from the browser, using Markdown."
-  },
-  {
-    "objectID": "my_scripts/markdown.html",
-    "href": "my_scripts/markdown.html",
-    "title": "markdown only source",
-    "section": "",
-    "text": "Using markdown documents also works.",
-    "crumbs": [
-      "Simulating income distribution",
-      "markdown only source"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Monte Carlo simulations for the curious",
-    "section": "",
-    "text": "This is a link: Quarto.",
-    "crumbs": [
-      "Welcome page"
-    ]
-  },
-  {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "Monte Carlo simulations for the curious",
-    "section": "",
-    "text": "This is a link: Quarto.",
-    "crumbs": [
-      "Welcome page"
-    ]
-  },
-  {
-    "objectID": "index.html#qs",
-    "href": "index.html#qs",
-    "title": "Monte Carlo simulations for the curious",
-    "section": "Qs",
-    "text": "Qs\nI wonder what controls the arrows at the bottom of this page. Probably in the yml.\nThe _site folder contains the html-files:\n\nindex.html\nlearning-more.html\ntransition-from-rmarkdown.html\n\nI think Index is the 1st link on the LHS and the other two are the last two links. Where is Explore and setup and Quarto workflows from?\nA: I found a index.qmd that contains the text in “Quarto workflows” in the quarto-workflows folder.",
-    "crumbs": [
-      "Welcome page"
-    ]
-  },
-  {
-    "objectID": "index.html#improving-the-github-workflow",
-    "href": "index.html#improving-the-github-workflow",
-    "title": "Monte Carlo simulations for the curious",
-    "section": "Improving the github workflow",
-    "text": "Improving the github workflow\nNow it installs the rpackages everytime. But you can cache them stackoverflow.\n:::{.callout-note} As you modify _quarto.yml, the most important thing to know is that spacing matters. Pay attention to whether text is indented by one, two, four, or other spaces, and make sure you follow it; if your site is not looking as expected it is likely a silent error in your YAML. Some text editors like RStudio provide debugging support for YAML and are highly recommended to save you time and heartache.",
-    "crumbs": [
-      "Welcome page"
-    ]
-  },
-  {
-    "objectID": "my_scripts/montecarlo_income.html",
-    "href": "my_scripts/montecarlo_income.html",
-    "title": "Simulating income distribution",
-    "section": "",
-    "text": "This will be the first thing we do on this website. The dataset will be used for upcoming projects.",
-    "crumbs": [
-      "Simulating income distribution"
-    ]
-  },
-  {
-    "objectID": "quarto-workflows/index.html",
-    "href": "quarto-workflows/index.html",
-    "title": "Section title",
-    "section": "",
-    "text": ":::"
-  },
-  {
-    "objectID": "quarto-workflows/index.html#install-quarto",
-    "href": "quarto-workflows/index.html#install-quarto",
-    "title": "Section title",
-    "section": "Install Quarto",
-    "text": "Install Quarto\nhttps://quarto.org/docs/get-started/ describes how to install Quarto, which will depend on your operating system. We’ll walk through installation for each tool in the next chapters."
   }
 ]
