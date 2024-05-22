@@ -27,7 +27,7 @@ website:
     contents:
       - href: index.qmd
         text: Welcome page
-      - section: my_scripts/montecarlo_income.qmd
+      - section: my_scripts/intro_monte_income.md
         contents: 
           - my_scripts/montecarlo_income.qmd
           - my_scripts/markdown.md

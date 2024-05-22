@@ -1,5 +1,26 @@
 ---
 title: Simulating income distribution
+editor_options: 
+  chunk_output_type: console
 ---
 
-This will be the first thing we do on this website. The dataset will be used for upcoming projects.
+```{r}
+#| include: false
+
+library(tidyverse)
+library(gt)
+library(janitor)
+```
+
+```{r}
+us_rent_income |> 
+  filter(variable == "income") |> 
+  arrange(desc(estimate)) |> 
+  clean_names() |> 
+  select(name, estimate) |> 
+  slice(1:10) |> 
+  gt() |> 
+  tab_header("Top 10 US incomes")
+```
+
+
