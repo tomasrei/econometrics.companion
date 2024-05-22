@@ -9,8 +9,8 @@ website:
   repo-actions: [edit, issue]
   
   page-footer:
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
-    left: "&copy; CC-By Openscapes, 2024"
+    right: "This text is controlled by _quarto.yml ❤️"
+    left: "&copy; This text is controlled by _quarto.yml"
     
   sidebar:
     logo: "images/openscapes_hex.png"
@@ -29,10 +29,10 @@ website:
 
     style: "docked"
     search: true
-    collapse-level: 1
+    collapse-level: 2
     contents:
       - href: index.qmd
-        text: Welcome
+        text: Text from _quarto.yml
       - explore.qmd
       - section: quarto-workflows/index.qmd
         contents: 
