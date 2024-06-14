@@ -20,6 +20,6 @@ A note on the resources I use. I will try and list references as I go along.....
 
 *Panel Data Visualization in R (panelView) and Stata (panelview)* Journal of Statistical Software (2023)
 
-
-
 :::
+
+This tutorial probably requires that you have some familiarity with econometrics and the did-method. I will assume that you are familiar with the, what I will call, most basic did setup and econometric lingo: parallel trends, treatment group and so on.. For reference, I am a master student that has recently finished year one of my degree. I do not have a strong stats background and have only read a little math during summer breaks ... In fact, the main reason I am doing this is...
