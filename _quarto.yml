@@ -31,7 +31,7 @@ website:
         contents: 
           - my_scripts/montecarlo_income.qmd
           - my_scripts/markdown.md
-      - section: 
+      - section: my_scripts/did/did_intro.md
         contents:
           - my_scripts/did/001_did_intro.qmd
 
