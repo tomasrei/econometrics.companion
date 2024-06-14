@@ -32,6 +32,8 @@ jobs:
             any::here
             any::janitor
             any::gt
+            any::patchwork
+            any::truncnorm
 
 
       - name: Publish to GitHub Pages (and render)

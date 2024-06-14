@@ -8,19 +8,41 @@ editor_options:
 #| include: false
 
 library(tidyverse)
-library(gt)
-library(janitor)
+library(gt) # For tables
+library(patchwork) # For arranging plots
+library(truncnorm) # for truncted distribution
 ```
 
+Resources: https://evalsp21.classes.andrewheiss.com/example/synthetic-data/
+
+  + Explains how to add "noise" to the data
+  + And many other things you will use!
+
+Resource 2: https://evalsp21.classes.andrewheiss.com/example/random-numbers/
+
+  + specifically income dist
+
+Variables:
+
++ Gender
++ Age
++ wage in sek
++
+
+How can we create a realistic wage distribution?
+
++ age span?
++ mean age?
++ 
+
 ```{r}
-us_rent_income |> 
-  filter(variable == "income") |> 
-  arrange(desc(estimate)) |> 
-  clean_names() |> 
-  select(name, estimate) |> 
-  slice(1:10) |> 
-  gt() |> 
-  tab_header("Top 10 US incomes")
+set.seed(1234)
+
+fake_people <- tibble(
+  income = rnorm(1000, mean = 40000, sd = 15000), 
+  age = rtruncnorm(1000, mean = 35, sd = 5, a = 12, b = 65),
+  # add gender her
+  education = rnorm(1000, mean = 16, sd = 4))
 ```
 
 
