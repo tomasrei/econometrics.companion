@@ -25,13 +25,14 @@
     ]
   },
   {
-    "objectID": "my_scripts/intro_monte_income.html",
-    "href": "my_scripts/intro_monte_income.html",
-    "title": "Simulating a income distribution",
+    "objectID": "my_scripts/markdown.html",
+    "href": "my_scripts/markdown.html",
+    "title": "markdown only source",
     "section": "",
-    "text": "This will be the first thing we do on this website. The dataset will be used for upcoming projects.",
+    "text": "Using markdown documents also works.",
     "crumbs": [
-      "Simulating a income distribution"
+      "Simulating a income distribution",
+      "markdown only source"
     ]
   },
   {
@@ -75,22 +76,21 @@
     ]
   },
   {
-    "objectID": "my_scripts/markdown.html",
-    "href": "my_scripts/markdown.html",
-    "title": "markdown only source",
+    "objectID": "my_scripts/intro_monte_income.html",
+    "href": "my_scripts/intro_monte_income.html",
+    "title": "Simulating a income distribution",
     "section": "",
-    "text": "Using markdown documents also works.",
+    "text": "This will be the first thing we do on this website. The dataset will be used for upcoming projects.",
     "crumbs": [
-      "Simulating a income distribution",
-      "markdown only source"
+      "Simulating a income distribution"
     ]
   },
   {
-    "objectID": "my_scripts/did/001_did_intro.html",
-    "href": "my_scripts/did/001_did_intro.html",
+    "objectID": "my_scripts/did/did_intro.html",
+    "href": "my_scripts/did/did_intro.html",
     "title": "Difference in differences",
     "section": "",
-    "text": "Difference in differences\nSince did is so popular and since there have been so many new … I though I would see if I could understand them by trying them out on some open data. There are more resources out there than ever before, resources I will lean on heavenly link to… blah blah\nIf you have probably heard names like Pedro Sant’Anna… yda yda yda\nNot only do they contribute to the did-litteratur, they also implement their finding into packages in R, Stata and Python (maybe more).\nReferences for my first project: +",
+    "text": "Difference in differences\nSince did is so popular and since there have been so many new … I though I would see if I could understand them by trying them out on some open data. There are more resources out there than ever before, resources I will lean on heavenly link to… blah blah\nI actually got the idea when I read Scott cunninghams newsletter LINK HERE. I though that maybe this is a great opportunity to follow along.\nIf you have probably heard names like Pedro Sant’Anna… yda yda yda\nNot only do they contribute to the did-litteratur, they also implement their finding into packages in R, Stata and Python (maybe more).\nReferences for my first project:\n\n\n\n\n\n\nNote\n\n\n\nWhat’s Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
     "crumbs": [
       "Difference in differences"
     ]
