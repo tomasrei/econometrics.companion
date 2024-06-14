@@ -237,13 +237,575 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">setdiff</span>(<span class="fu">ls</span>(), <span class="fu">c</span>(<span class="st">"turnout"</span>))) <span class="co"># How can I load only turnout?</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>turnout <span class="ot">&lt;-</span> turnout <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>()</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">panelview</span>(turnout <span class="sc">~</span> policy_edr <span class="sc">+</span> policy_mail_in <span class="sc">+</span> policy_motor, </span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> turnout, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"abb"</span>,<span class="st">"year"</span>), </span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"State"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>turnout <span class="sc">|&gt;</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_sample</span>(<span class="at">n =</span> <span class="dv">10</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_header</span>(<span class="st">"Random sample of the turnout data"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_footnote</span>(<span class="st">"The dataset contains voter turnout for 47 states spanning the years 1920-2012 from a paper by Xu (2017)"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_footnote</span>(<span class="fu">md</span>(<span class="st">"**policy_edr**: is the treatment variable"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tab_footnote</span>(<span class="st">"policy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="hxagvglzmk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hxagvglzmk table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hxagvglzmk thead, #hxagvglzmk tbody, #hxagvglzmk tfoot, #hxagvglzmk tr, #hxagvglzmk td, #hxagvglzmk th {
+  border-style: none;
+}
+
+#hxagvglzmk p {
+  margin: 0;
+  padding: 0;
+}
+
+#hxagvglzmk .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hxagvglzmk .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hxagvglzmk .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hxagvglzmk .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hxagvglzmk .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hxagvglzmk .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hxagvglzmk .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hxagvglzmk .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hxagvglzmk .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hxagvglzmk .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hxagvglzmk .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hxagvglzmk .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hxagvglzmk .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hxagvglzmk .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hxagvglzmk .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hxagvglzmk .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hxagvglzmk .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hxagvglzmk .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hxagvglzmk .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hxagvglzmk .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hxagvglzmk .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hxagvglzmk .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hxagvglzmk .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hxagvglzmk .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hxagvglzmk .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hxagvglzmk .gt_left {
+  text-align: left;
+}
+
+#hxagvglzmk .gt_center {
+  text-align: center;
+}
+
+#hxagvglzmk .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hxagvglzmk .gt_font_normal {
+  font-weight: normal;
+}
+
+#hxagvglzmk .gt_font_bold {
+  font-weight: bold;
+}
+
+#hxagvglzmk .gt_font_italic {
+  font-style: italic;
+}
+
+#hxagvglzmk .gt_super {
+  font-size: 65%;
+}
+
+#hxagvglzmk .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hxagvglzmk .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hxagvglzmk .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hxagvglzmk .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hxagvglzmk .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hxagvglzmk .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hxagvglzmk .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border">Random sample of the turnout data</th>
+</tr>
+<tr class="odd gt_col_headings">
+<th id="abb" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">abb</th>
+<th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
+<th id="turnout" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">turnout</th>
+<th id="policy_edr" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">policy_edr</th>
+<th id="policy_mail_in" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">policy_mail_in</th>
+<th id="policy_motor" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">policy_motor</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="abb">SD</td>
+<td class="gt_row gt_right" headers="year">1984</td>
+<td class="gt_row gt_right" headers="turnout">64.86859</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="abb">IL</td>
+<td class="gt_row gt_right" headers="year">1972</td>
+<td class="gt_row gt_right" headers="turnout">62.63405</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="abb">NV</td>
+<td class="gt_row gt_right" headers="year">2008</td>
+<td class="gt_row gt_right" headers="turnout">48.40000</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">1</td>
+<td class="gt_row gt_right" headers="policy_motor">1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="abb">GA</td>
+<td class="gt_row gt_right" headers="year">1992</td>
+<td class="gt_row gt_right" headers="turnout">46.38394</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="abb">ID</td>
+<td class="gt_row gt_right" headers="year">1964</td>
+<td class="gt_row gt_right" headers="turnout">75.53642</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="abb">TN</td>
+<td class="gt_row gt_right" headers="year">1920</td>
+<td class="gt_row gt_right" headers="turnout">36.42706</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="abb">IA</td>
+<td class="gt_row gt_right" headers="year">1956</td>
+<td class="gt_row gt_right" headers="turnout">73.64104</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="abb">CO</td>
+<td class="gt_row gt_right" headers="year">1976</td>
+<td class="gt_row gt_right" headers="turnout">60.55095</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="abb">RI</td>
+<td class="gt_row gt_right" headers="year">1924</td>
+<td class="gt_row gt_right" headers="turnout">53.94674</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="abb">NM</td>
+<td class="gt_row gt_right" headers="year">1964</td>
+<td class="gt_row gt_right" headers="turnout">62.73746</td>
+<td class="gt_row gt_right" headers="policy_edr">0</td>
+<td class="gt_row gt_right" headers="policy_mail_in">0</td>
+<td class="gt_row gt_right" headers="policy_motor">0</td>
+</tr>
+</tbody><tfoot class="gt_footnotes">
+<tr class="even">
+<td colspan="6" class="gt_footnote">The dataset contains voter turnout for 47 states spanning the years 1920-2012 from a paper by Xu (2017)</td>
+</tr>
+<tr class="odd">
+<td colspan="6" class="gt_footnote"><strong>policy_edr</strong>: is the treatment variable</td>
+</tr>
+<tr class="even">
+<td colspan="6" class="gt_footnote">policy</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">panelview</span>(turnout <span class="sc">~</span> policy_edr <span class="sc">+</span> policy_mail_in <span class="sc">+</span> policy_motor, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>          <span class="at">data =</span> turnout, <span class="at">index =</span> <span class="fu">c</span>(<span class="st">"abb"</span>,<span class="st">"year"</span>), </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>          <span class="at">xlab =</span> <span class="st">"Year"</span>, <span class="at">ylab =</span> <span class="st">"State"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="001_did_intro_files/figure-html/Load data and plot treatment rollout-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="001_did_intro_files/figure-html/and plot treatment rollout-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
