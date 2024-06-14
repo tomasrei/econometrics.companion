@@ -25,6 +25,28 @@
     ]
   },
   {
+    "objectID": "my_scripts/did/001_did_intro.html",
+    "href": "my_scripts/did/001_did_intro.html",
+    "title": "Do i need a title?",
+    "section": "",
+    "text": "Mou, Liu & Xu (2023) [hencforth MLX] argues in the intro to the paper accompaning their package panelView, it is not common practice to plot the raw data before continuing. Really bad consequences might follow. MLX mentions 3:\nThe reason why researchers miss such thing is a ‘lack of proper tools’, both in Stata and R. I think the main point here is that both languages are missing “…specifically designed to assist researchers in understanding patterns of treatment adoption/intensity or exploring relationships between multiple relevant variables”.\nOk, let’s see what panelView can show us.\n\n# Load data\ndata(panelView)\nrm(list = setdiff(ls(), c(\"turnout\"))) # How can I load only turnout?\nturnout &lt;- turnout |&gt; as_tibble()\n\npanelview(turnout ~ policy_edr + policy_mail_in + policy_motor, \n          data = turnout, index = c(\"abb\",\"year\"), \n          xlab = \"Year\", ylab = \"State\")",
+    "crumbs": [
+      "Difference in differences",
+      "Do i need a title?"
+    ]
+  },
+  {
+    "objectID": "my_scripts/did/001_did_intro.html#step-1-plot-treatment-rollout",
+    "href": "my_scripts/did/001_did_intro.html#step-1-plot-treatment-rollout",
+    "title": "Do i need a title?",
+    "section": "",
+    "text": "Mou, Liu & Xu (2023) [hencforth MLX] argues in the intro to the paper accompaning their package panelView, it is not common practice to plot the raw data before continuing. Really bad consequences might follow. MLX mentions 3:\nThe reason why researchers miss such thing is a ‘lack of proper tools’, both in Stata and R. I think the main point here is that both languages are missing “…specifically designed to assist researchers in understanding patterns of treatment adoption/intensity or exploring relationships between multiple relevant variables”.\nOk, let’s see what panelView can show us.\n\n# Load data\ndata(panelView)\nrm(list = setdiff(ls(), c(\"turnout\"))) # How can I load only turnout?\nturnout &lt;- turnout |&gt; as_tibble()\n\npanelview(turnout ~ policy_edr + policy_mail_in + policy_motor, \n          data = turnout, index = c(\"abb\",\"year\"), \n          xlab = \"Year\", ylab = \"State\")",
+    "crumbs": [
+      "Difference in differences",
+      "Do i need a title?"
+    ]
+  },
+  {
     "objectID": "my_scripts/markdown.html",
     "href": "my_scripts/markdown.html",
     "title": "markdown only source",
@@ -90,7 +112,7 @@
     "href": "my_scripts/did/did_intro.html",
     "title": "Difference in differences",
     "section": "",
-    "text": "Difference in differences\nSince did is so popular and since there have been so many new … I though I would see if I could understand them by trying them out on some open data. There are more resources out there than ever before, resources I will lean on heavenly link to… blah blah\nI actually got the idea when I read Scott cunninghams newsletter LINK HERE. I though that maybe this is a great opportunity to follow along.\nIf you have probably heard names like Pedro Sant’Anna… yda yda yda\nNot only do they contribute to the did-litteratur, they also implement their finding into packages in R, Stata and Python (maybe more).\nReferences for my first project:\n\n\n\n\n\n\nNote\n\n\n\nWhat’s Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
+    "text": "Difference in differences\nSince did is so popular and since there have been so many new … I though I would see if I could understand them by trying them out on some open data. There are more resources out there than ever before, resources I will lean on heavenly link to… blah blah\nI actually got the idea when I read Scott cunninghams newsletter LINK HERE. I though that maybe this is a great opportunity to follow along. SC use xxx-data\nIf you have probably heard names like Pedro Sant’Anna… yda yda yda\nNot only do they contribute to the did-litteratur, they also implement their finding into packages in R, Stata and Python (maybe more).\nReferences for my first project:\n\n\n\n\n\n\nNote\n\n\n\nA note on the resources I use. I will try and list references as I go along…..\nPanel Data Visualization in R (panelView) and Stata (panelview) Journal of Statistical Software (2023)",
     "crumbs": [
       "Difference in differences"
     ]
