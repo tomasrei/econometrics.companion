@@ -1,4 +1,5 @@
 ---
+title: Do i need a title?
 output: html_document
 editor_options: 
   chunk_output_type: console
@@ -15,7 +16,24 @@ library(panelView)
 
 ## Step 1: Plot treatment rollout
 
-```{r}
+Mou, Liu & Xu (2023) [hencforth MLX] argues in the intro to the paper accompaning their package panelView, it is not common practice to plot the raw data before continuing. Really bad consequences might follow. MLX mentions 3: 
+
+The reason why researchers miss such thing is a 'lack of proper tools', both in Stata and R. I think the main point here is that both languages are missing "...*specifically designed to assist researchers in understanding patterns of treatment adoption/intensity or exploring relationships between multiple relevant variables*".
+
+Ok, let's see what panelView can show us.
+
+```{r Load data and  plot treatment rollout}
+# Load data
+data(panelView)
+rm(list = setdiff(ls(), c("turnout"))) # How can I load only turnout?
+turnout <- turnout |> as_tibble()
+
+panelview(turnout ~ policy_edr + policy_mail_in + policy_motor, 
+          data = turnout, index = c("abb","year"), 
+          xlab = "Year", ylab = "State")
+
+
+
 
 ```
 
