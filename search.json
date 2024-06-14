@@ -18,21 +18,20 @@
     "href": "my_scripts/montecarlo_income.html",
     "title": "Simulating income distribution",
     "section": "",
-    "text": "us_rent_income |&gt; \n  filter(variable == \"income\") |&gt; \n  arrange(desc(estimate)) |&gt; \n  clean_names() |&gt; \n  select(name, estimate) |&gt; \n  slice(1:10) |&gt; \n  gt() |&gt; \n  tab_header(\"Top 10 US incomes\")\n\n\n\n\n\n\n\n\nTop 10 US incomes\n\n\nname\nestimate\n\n\n\n\nDistrict of Columbia\n43198\n\n\nMaryland\n37147\n\n\nConnecticut\n35326\n\n\nNew Jersey\n35075\n\n\nMassachusetts\n34498\n\n\nNew Hampshire\n33172\n\n\nAlaska\n32940\n\n\nMinnesota\n32734\n\n\nVirginia\n32545\n\n\nHawaii\n32453",
+    "text": "Resources: https://evalsp21.classes.andrewheiss.com/example/synthetic-data/\n\nExplains how to add “noise” to the data\nAnd many other things you will use!\n\nResource 2: https://evalsp21.classes.andrewheiss.com/example/random-numbers/\n\nspecifically income dist\n\nVariables:\n\nGender\nAge\nwage in sek\n\n\nHow can we create a realistic wage distribution?\n\nage span?\nmean age?\n\n\n\nset.seed(1234)\n\nfake_people &lt;- tibble(\n  income = rnorm(1000, mean = 40000, sd = 15000), \n  age = rtruncnorm(1000, mean = 35, sd = 5, a = 12, b = 65),\n  # add gender her\n  education = rnorm(1000, mean = 16, sd = 4))",
     "crumbs": [
       "Simulating a income distribution",
       "Simulating income distribution"
     ]
   },
   {
-    "objectID": "my_scripts/markdown.html",
-    "href": "my_scripts/markdown.html",
-    "title": "markdown only source",
+    "objectID": "my_scripts/intro_monte_income.html",
+    "href": "my_scripts/intro_monte_income.html",
+    "title": "Simulating a income distribution",
     "section": "",
-    "text": "Using markdown documents also works.",
+    "text": "This will be the first thing we do on this website. The dataset will be used for upcoming projects.",
     "crumbs": [
-      "Simulating a income distribution",
-      "markdown only source"
+      "Simulating a income distribution"
     ]
   },
   {
@@ -70,19 +69,30 @@
     "href": "index.html#improving-the-github-workflow",
     "title": "Monte Carlo simulations for the curious",
     "section": "Improving the github workflow",
-    "text": "Improving the github workflow\nNow it installs the rpackages everytime. But you can cache them stackoverflow.\n:::{.callout-note} As you modify _quarto.yml, the most important thing to know is that spacing matters. Pay attention to whether text is indented by one, two, four, or other spaces, and make sure you follow it; if your site is not looking as expected it is likely a silent error in your YAML. Some text editors like RStudio provide debugging support for YAML and are highly recommended to save you time and heartache.",
+    "text": "Improving the github workflow\nNow it installs the rpackages everytime. But you can cache them stackoverflow.\n\n\n\n\n\n\nNote\n\n\n\nAs you modify _quarto.yml, the most important thing to know is that spacing matters. Pay attention to whether text is indented by one, two, four, or other spaces, and make sure you follow it; if your site is not looking as expected it is likely a silent error in your YAML. Some text editors like RStudio provide debugging support for YAML and are highly recommended to save you time and heartache.",
     "crumbs": [
       "Welcome page"
     ]
   },
   {
-    "objectID": "my_scripts/intro_monte_income.html",
-    "href": "my_scripts/intro_monte_income.html",
-    "title": "Simulating a income distribution",
+    "objectID": "my_scripts/markdown.html",
+    "href": "my_scripts/markdown.html",
+    "title": "markdown only source",
     "section": "",
-    "text": "This will be the first thing we do on this website. The dataset will be used for upcoming projects.",
+    "text": "Using markdown documents also works.",
     "crumbs": [
-      "Simulating a income distribution"
+      "Simulating a income distribution",
+      "markdown only source"
+    ]
+  },
+  {
+    "objectID": "my_scripts/did/001_did_intro.html",
+    "href": "my_scripts/did/001_did_intro.html",
+    "title": "Difference in differences",
+    "section": "",
+    "text": "Difference in differences\nSince did is so popular and since there have been so many new … I though I would see if I could understand them by trying them out on some open data. There are more resources out there than ever before, resources I will lean on heavenly link to… blah blah\nIf you have probably heard names like Pedro Sant’Anna… yda yda yda\nNot only do they contribute to the did-litteratur, they also implement their finding into packages in R, Stata and Python (maybe more).\nReferences for my first project: +",
+    "crumbs": [
+      "Difference in differences"
     ]
   },
   {
